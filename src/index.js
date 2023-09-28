@@ -1,4 +1,6 @@
-import home from './home';
+import header from './header';
+import './static/styles.css';
+import './static/styles-layout.css';
 
 console.log('yo buffy')
 
@@ -6,21 +8,7 @@ console.log('yo buffy')
 
 const container = document.querySelector('#h-container');
 
-const content = document.createElement('div');
-const cup = document.createElement('p');
-cup.innerHTML = "yoyo";
+const navbar = header();
 
-console.log('before home ini');
-
-const homeElement = home();
-
-console.log('after home ini');
-
-content.append(homeElement, cup);
-
-console.log('3');
-
-container.append(content);
-
-console.log('4');
+container.append(navbar);
 
