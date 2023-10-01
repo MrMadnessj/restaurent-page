@@ -12,19 +12,22 @@ export default function home(){
     const homecontent = document.createElement('div');
     const content = document.createElement('h1');
 
-    content.innerHTML = "Lifes a journey Coffees the Fuel Keep Brewing!""
+    content.innerHTML = "Life's a journey<br>Coffee's the fuel<br>Keep brewing!";
 
-    homecontent.classList.add('home-con-div');
+    // homecontent.classList.add('home-con-div');
     content.classList.add('home-content');
 
-    homecontent.append(content);
+    // homecontent.append(content);
 
     heroPic.src = Coffee;
     heroPic.classList.add('hero-pic');
 
     home.classList.add('home-div');
 
-    homeElements.append(homecontent, heroPic);
+
+    const leftBgImage = document.createElement('div');
+
+    homeElements.append(heroPic, content);
     home.append(homeElements);
 
     return home;

@@ -1,34 +1,68 @@
+*{
+    user-select: none;
+}
 
 .home-div{
-    min-height: 100vh;
+
     background-color: rgb(234, 0, 255);
     background-image: linear-gradient(to bottom right, #5f3900, #d37f02);
     background-color: #5f3900;
 }
 
 .home-elements{
+    min-height: 76.5vh;
     display: flex;
-    gap: 1rem;
-    justify-self: center;
+
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
+    gap: 0.5rem;
 }
 
 .hero-pic{
-    height: 3rem;
+    height: 35rem;
+    border: 1px solid green;
+    margin: 0 0 0 0;
 }
 
 .hero-pic-div{
-    border: 1px solid green;
+    border: 1px solid rgb(0, 0, 0);
     flex: 1;
+    flex-shrink: 1;
+    padding: 0 0 2rem 0;
 }
 
 .home-con-div{
     border: 1px solid blue;
-    word-wrap: break-word;
+
+    max-width: 30rem;
     flex: 1;
+    padding: 1rem;
+    flex-shrink: 1;
+    width: 40rem;
+    padding: 7rem 0 0 0;
 }
 
 .home-content{
-    font-size: 3rem;
+    font-size: clamp(3.5rem, 6rem, 8rem);
+    border: 1px solid yellow;
+    word-break: break-all;
+    width: clamp(15rem, 45rem, 100rem);
+
+    font-family: 'DM Serif Text';
+    color: rgb(78, 51, 0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-pic:hover + .home-content{
+    color: white;
+}
+
+.hero-pic::after + .home-content{
+    color: white;
 }
