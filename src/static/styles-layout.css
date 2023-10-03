@@ -95,19 +95,3 @@
 }
 
 
-.menu-div{
-    background-color: #1F0F53;
-    min-height: 76.5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu{
-    border: 1px solid yellow;
-    min-height: 70vh;
-    min-width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-flow: column;
-}

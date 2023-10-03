@@ -3,6 +3,7 @@ import home from './home';
 import menu from './menu';
 import './static/styles.css';
 import './static/styles-layout.css';
+import './static/menu.css';
 
 
 
@@ -18,7 +19,7 @@ const menusection = menu();
 
 console.log('yo buffy');
 
-container.append(navbar,menusection);
+container.append(navbar);
 
 console.log('yo buffy');
 
