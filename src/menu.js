@@ -1,3 +1,5 @@
+import Coffee from './img/paper-cup.png'
+
 export default function menu() {
     const mainMenu = document.createElement('div');
     mainMenu.classList.add('main-menu');
@@ -16,7 +18,10 @@ export default function menu() {
     leftBtn.addEventListener('click', () => {
         if(currentIndex < 3 && currentIndex >= 0){
             console.log('neow');
-            --currentIndex;
+            if(currentIndex == 0)
+                currentIndex = 0;
+            else
+                currentIndex--;
             update();
         }
     });
@@ -24,7 +29,10 @@ export default function menu() {
     rightBtn.addEventListener('click', () => {
         if(currentIndex < 3 && currentIndex >= 0){
             console.log('nopoeow');
-            ++currentIndex;
+            if(currentIndex == 2)
+                currentIndex = 2;
+            else
+                currentIndex++;
             update();
         }
     })
@@ -161,7 +169,7 @@ function menuCreator(menuName, menuDesc)
     return menuHeading;
 }
 
-function createMenuItem(name, ingredients, price, image){
+function createMenuItem(name, ingredients, price){
     const card = document.createElement('div');
     card.classList.add('card');
 
@@ -171,7 +179,10 @@ function createMenuItem(name, ingredients, price, image){
 
     const imageholder = document.createElement('div');
     imageholder.classList.add('image-holder');
-    imageholder.textContent = 'image';
+    const image = new Image();
+    image.classList.add('menu-image');
+    image.src = Coffee;
+    imageholder.append(image);
 
     const itemPrice = document.createElement('p');
     itemPrice.textContent = `$${price}`;

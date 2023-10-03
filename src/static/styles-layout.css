@@ -70,10 +70,13 @@
     cursor: pointer;
 }
 
+
+
 .btn-ul{
     display: inline-block;
     position: relative;
 }
+
 
 .btn-ul::after{
     content: '';
@@ -93,5 +96,11 @@
     transform: scaleX(1);
     transform-origin: center;
 }
+
+.menu-image{
+    max-height: 6rem;
+}
+
+
 
 

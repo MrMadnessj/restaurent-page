@@ -62,7 +62,11 @@ function form(){
     const messageDiv = document.createElement('div');
     messageDiv.append(messagelabel,messageInput);
 
-    cform.append(nameDiv, emailDiv, messageDiv);
+    const submit = document.createElement('button');
+    submit.classList.add('submit-btn');
+    submit.innerHTML = 'Submit';
+
+    cform.append(nameDiv, emailDiv, messageDiv, submit);
     return cform;
 }
 
